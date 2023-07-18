@@ -1,0 +1,58 @@
+.walletCard {
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	border-radius: 10px;
+	background-color: lightcoral;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	padding: 2em;
+	color: #333333;
+  }
+  
+  .walletCard h3 {
+	margin: 0.5em 0;
+	font-size: 1.5em;
+  }
+  
+  .interactionsCard {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: auto;
+	padding: 2em;
+	border-radius: 10px;
+	background-color: chocolate;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	color: #333333;
+  }
+  
+  .addressInput {
+	width: 75%;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	background-color: cornflowerblue;
+	color: #333333;
+  }
+  
+  .button6 {
+	border: none;
+	padding: 1em 2em;
+	margin: 0.5em 0;
+	border-radius: 5px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Arial', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: white;
+	background-color: #4E9CAF;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease;
+  }
+  
+  .button6:hover {
+	background-color: #3D8A99;
+  }
+  
