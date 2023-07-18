@@ -1,71 +1,76 @@
-# Steps to run the codebase 
+# Easy Payment
 
-$ npm install
-$ npm start
+This is a Easy Payment project where you can Create Account,Check Account,Check Balance,Transfer, Deposit, Calculate you loan amount, Change Default Acoount etc. 
 
-navigate browser to localhost:3000
+## Description
 
------------------------------
-## Tech Stack
+This project is an innovative web-based application for an Automated Teller Machine (ATM) system, thoughtfully crafted using cutting-edge technologies: React for the frontend and Ethereum blockchain for secure and transparent financial transactions. By leveraging these technologies, users can seamlessly interact with a local Ganache blockchain, a development Ethereum network, through their MetaMask wallet, ensuring a secure and decentralized banking experience.
 
-React Js
-Solidity
+1 User-Friendly Interface: The application boasts an intuitive and user-friendly interface that ensures a smooth banking experience for users of all levels of technical expertise.
 
-## Available Scripts
+2 Account Creation: 
+Users can effortlessly create their bank accounts within the system, requiring minimal information and ensuring a streamlined onboarding process.
 
-In the project directory, you can run:
+3 Account Existence and Balance Checking: The system enables users to verify the existence of their accounts and promptly check their account balances, providing real-time updates.
 
-### `npm start`
+4 Funds Transfer: Facilitating seamless peer-to-peer transactions, users can transfer funds securely between accounts within the application. The decentralized nature of the Ethereum blockchain ensures reliability and transparency.
+  
+5 Deposit and Withdrawal Operations: The application accommodates hassle-free deposits and withdrawals, allowing users to manage their funds efficiently.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6 Blockchain Integration: The integration of Ethereum blockchain technology guarantees robust security, immutability, and transparency for all financial operations.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+7 MetaMask Wallet Integration: By integrating the widely trusted MetaMask wallet, users can effortlessly manage their digital assets securely and conduct transactions with utmost confidence.
 
-### `npm run build`
+8 Ganache Blockchain Network: The application harnesses the power of a local Ganache blockchain network for testing and development purposes, ensuring optimal performance and efficiency.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Benefits:
 
-# Structure of files in the codebase
+* Security: With the implementation of Ethereum blockchain, the system ensures that all financial transactions are highly secure, mitigating the risk of fraudulent activities.
 
-src Folder -
-    Contracts - 
-        BankApp.sol - You can view the smartcontract used in this code 
-        bank_app_abi.json - The abi file of the smartcontract.
+* Transparency: The decentralized nature of the Ethereum blockchain brings transparency to every financial operation, allowing users to verify and audit transactions independently.
 
-The smart contract is deployed on Test BSC Network.
+* Accessibility: Users can access the application through their web browsers, ensuring convenient access to banking services from anywhere at any time.
 
-### Contract Address - 0x59eFE99aA926a79edEA31F7ED3b2661b1F9e2F62
+* Innovation: By adopting emerging technologies like React and Ethereum, the project stands at the forefront of the latest advancements in fintech, providing users with a modern and forward-thinking banking solution.
 
-## Flow of smart contract
-
-1.Firstly connect your wallet by clicking on connectwallet button(Make sure you have test BNB in your wallet).
-2.You need to create the account by clicking on createAccount  button
-3.You can check whether your account is listed in the network by clicking on checkAccountExists Button
-4.Next you can deposit the balance into your account by entering the number in the textbox.
-5.You can check the balance in the bank account using Account Balance button.
-6.You can transfer your funds in the bank account to another bank account(Make sure that account is also listed in the network)
-7.You can withdraw funds using Withdraw button.
+### Executing program
 
 
+To execute the program described in the previous code snippet, follow these steps:
 
-## In App.js you can find all these functions
+Prerequisites:
 
-connectWalletHandler - For connecting the metamask wallet
-AccoutChangedHandler - Chainging account from metamask can cause this function to work
-chainChangedHandler - Chainging the chain network in the metamask can cause this function to work
-updateEthers - This function helps in communicating with the abi,deployed smart contract and the provider network of the metamask
+* Make sure you have Visual Studio Code (VSCode) installed as your IDE.
+* Install Node.js from the official website (https://nodejs.org/). This will also install npm (Node Package Manager) by default.
+* Open a terminal or command prompt.
 
-### `let tempProvider = new ethers.providers.Web3Provider(window.ethereum);`
-###	`let tempSigner = tempProvider.getSigner();`
-### `let tempContract = new ethers.Contract(contractAddress, simple_token_abi, tempSigner)` - These are the steps for integrating Smartcontract with the Frontend.
+2 Install Hardhat:
+npm install -g hardhat
 
-createAccount - Creates the Account in the Bank Dapp
-checkAccountExists - Checks if the Account is listed in the Dapp
-AccountBalance - Checks the balance of the account in the Bank
-DepositBalance - For depositing the balance from your metamask wallet account to bank account
-WithdrawBalance - For Withdrawing the balance from your bank account to metamask wallet address 
-TransferHandler -For transferring the funds between accounts in the bank. Make sure both the banks are listed in the network.
+3 Setting up the project:
 
+(i) Create a new folder for your project and navigate to it in the terminal.
+Inside the project folder, create a new file named hardhat.config.js. This file will contain the Hardhat configuration for your project and specify the Ethereum network (Ganache in this case).
+(ii) Install necessary dependencies:
+In your terminal, navigate to your project folder and run the following command:
+npm init -y
+npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers
+
+4 Start the local Ethereum network (Ganache):
+npx hardhat node
+
+5 Deploy the smart contract:
+In a new terminal (Terminal 2), run the following command to deploy the smart contract on the local Ethereum network:
+npx hardhat run --network localhost scripts/deploy.js
+
+6 Start the React application:
+In a new terminal (Terminal 3), navigate to your project folder (where package.json is located) and run the following command:
+npm start
+
+
+## Authors
+Ashi Yadav
+USer Name-Ashi_21BCS8248
+
+## License
+This Contract is using the MIT License
